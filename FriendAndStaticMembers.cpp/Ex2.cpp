@@ -1,0 +1,30 @@
+//Shows use of friend class
+#include <iostream>
+using namespace std;
+
+class Your;
+class My
+{
+    private:int a;
+    protected:int b;
+    public: int c;
+
+    friend Your;
+};
+
+class Your
+{
+public:
+    My m;
+    void fun()
+    {
+        m.a=10;
+        m.b=1;
+        m.c=8;
+    }
+};
+
+int main()
+{
+
+}
